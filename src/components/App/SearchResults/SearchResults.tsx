@@ -19,7 +19,7 @@ const App: React.FC<Props> = (props: Props) => {
                         <CircularProgress />
                 ) : (
                     searchResults.map((searchResult) => (
-                        <div className={classes.searchResult}>
+                        <div key={searchResult.id} className={classes.searchResult}>
                             <Box padding={1}>
                                 <Typography variant='subtitle1'>{searchResult.name}</Typography>
                             </Box>

@@ -25,8 +25,7 @@ const styles = makeStyles((theme) => {
             alignItems: 'flex-start',
             justifyItems: 'center'
         },
-        ratingBar: {
-        }
+        ratingBar: {}
     }
 })
 

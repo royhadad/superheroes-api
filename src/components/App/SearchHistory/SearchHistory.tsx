@@ -20,7 +20,7 @@ const App: React.FC<Props> = (props: Props) => {
                 ) : (
                     <div>
                         {searchHistory.map((searchHistoryItem) => (
-                            <div>{searchHistoryItem}</div>
+                            <div key={searchHistoryItem}>{searchHistoryItem}</div>
                         ))}
                     </div>
                 )}
