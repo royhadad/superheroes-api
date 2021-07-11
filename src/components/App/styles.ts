@@ -2,7 +2,11 @@ import {makeStyles} from "@material-ui/core/styles";
 
 const styles = makeStyles((theme) => {
     return {
-        root: {},
+        root: {
+            width: '100%',
+            maxWidth: '800px',
+            margin: '20px auto'
+        },
         title: {},
         search: {},
         searchResults: {
@@ -10,6 +14,12 @@ const styles = makeStyles((theme) => {
         },
         searchResult: {
             border: '1px solid black'
+        },
+        powerStat: {
+            display: 'flex'
+        },
+        superheroImage: {
+            width: '100%'
         }
     }
 })
