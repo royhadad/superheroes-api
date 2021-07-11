@@ -2,6 +2,7 @@ import express from 'express';
 import axios from 'axios';
 
 const {SUPERHERO_API_ACCESS_TOKEN} = process.env;
+
 const router = express.Router();
 
 router.get('/api/superheroData/:name', async (req, res) => {
@@ -10,8 +11,20 @@ router.get('/api/superheroData/:name', async (req, res) => {
         return res.status(400).send('no superhero name specified');
     }
 
-    const superheroData = await axios.get(`https://superheroapi.com/api/${SUPERHERO_API_ACCESS_TOKEN}/search/${name}`);
-    return res.send(superheroData);
+
+
+    const response = await axios.get(`https://superheroapi.com/api/${SUPERHERO_API_ACCESS_TOKEN}/search/${name}`);
+    const results = response.data?.results;
+
+    if (!results) {
+        return res.status(500).send();
+    } else {
+        return res.send(results);
+    }
+});
+
+router.get('/api/searchHistory', async (req, res) => {
+
 });
 
 export {router as apiRoutes}

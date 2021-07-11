@@ -2,8 +2,14 @@ import {makeStyles} from "@material-ui/core/styles";
 
 const styles = makeStyles((theme) => {
     return {
-        root: {
-
+        root: {},
+        title: {},
+        search: {},
+        searchResults: {
+            border: '1px solid red'
+        },
+        searchResult: {
+            border: '1px solid black'
         }
     }
 })
