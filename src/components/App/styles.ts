@@ -8,19 +8,7 @@ const styles = makeStyles((theme) => {
             margin: '20px auto'
         },
         title: {},
-        search: {},
-        searchResults: {
-            border: '1px solid red'
-        },
-        searchResult: {
-            border: '1px solid black'
-        },
-        powerStat: {
-            display: 'flex'
-        },
-        superheroImage: {
-            width: '100%'
-        }
+        search: {}
     }
 })
 
