@@ -28,7 +28,7 @@ const App: React.FC<Props> = (props: Props) => {
                                     <Box padding={1}>
                                         <Grid container>
                                             {Object.entries(searchResult.powerstats).map(([powerstatName, powerstatRating]) => (
-                                                <>
+                                                <React.Fragment key={powerstatName}>
                                                     <Grid item xs={6}
                                                           className={classes.powerstatName}>{powerstatName}:</Grid>
                                                     <Grid item xs={6}>
@@ -38,7 +38,7 @@ const App: React.FC<Props> = (props: Props) => {
                                                             className={classes.ratingBar}
                                                         />
                                                     </Grid>
-                                                </>
+                                                </React.Fragment>
                                             ))}</Grid>
                                     </Box>
                                 </Grid>
